@@ -13,13 +13,15 @@ export default function TodoInput(props) {
     }
 
     return (
-        <header>
+        <header style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+
+            <h1>Daily To Do List</h1> 
             <input 
                 value={todoValue} 
                 onChange={(e) => setTodoValue(e.target.value)} 
                 placeholder="Enter task..." 
             />
-            <button onClick={handleAddClick}>Add</button>
+            <button onClick={handleAddClick}>Add task</button>
         </header>
     )
 }
